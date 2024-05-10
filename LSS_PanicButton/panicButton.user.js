@@ -16,7 +16,7 @@
     'use strict';
 
     //HIER ABSCHIEDSNACHRICHT BEARBEITEN//
-    var CUSTOM_GOODBYE_MESSAGE = "@all Habe einen Realeinsatz! Rufe meinen Rettungsdienst zurück! (Gesendet von Panic Button)";
+    var CUSTOM_GOODBYE_MESSAGE = "@all  (WICHTIG) Ich rufe meinen Rettungsdienst zurück!";
     //////////////////////////////////////////////////////
 
     function init()
@@ -43,7 +43,7 @@
                 return;
             }
             //If User confirms "Panic"
-            if(confirm("Alarm! Alarm!"))
+            if(confirm(" Rettungsdienst Zurückalarmieren? "))
             {
                 //reset cooldown Timer
                 var d = new Date();
@@ -57,7 +57,7 @@
     function cooldown()
     {
         //Default cooling Time
-        var coolingTime = 15;
+        var coolingTime = 1;
         //Get last activation of Panic
         var lastActivation = parseInt(localStorage.getItem("LSS_PanicButton"));
         //Get current time
